@@ -21,6 +21,7 @@ export const GraphScene = () => {
 
     useSocket("graph", (update: Lnd.GraphUpdate) => {
         // Exercise: Call `graphRef.current.updateGraph` with the update
+        graphRef.current.updateGraph(update);
     });
 
     return (
