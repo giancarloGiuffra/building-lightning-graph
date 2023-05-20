@@ -15,7 +15,7 @@ export const GraphScene = () => {
         // `graphRef.current.createGraph`
         api.fetchGraph().then((graph: Lnd.Graph) => {
             console.log(graph);
-            // Todo
+            graphRef.current.createGraph(graph)
         });
     }, []);
 
