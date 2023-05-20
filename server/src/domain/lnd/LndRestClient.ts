@@ -16,7 +16,7 @@ export class LndRestClient {
     public async getGraph(): Promise<Lnd.Graph> {
         // Exercise: use the `get` method below to call `/v1/graph` API
         // and return the results
-        return undefined;
+        return this.get("/v1/graph");
     }
 
     /**
@@ -53,7 +53,7 @@ export class LndRestClient {
 
     /**
      * Helper function for making HTTP GET requests to the LND node's
-     * REST API. This method includes the the macaroon provided at
+     * REST API. This method includes the macaroon provided at
      * instance construction and connects using the node's TLS certificate.
      * @param path API path, ex: /api/graph
      * @returns
